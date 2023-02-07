@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "scribble-space-angular": {
+      "hosting": {
+        "Notes": [
+          "scribble-space-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "scribble-space-angular"
+  }
+}
