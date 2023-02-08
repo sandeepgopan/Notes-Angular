@@ -1,0 +1,25 @@
+.form-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px;
+}
+.label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.submit-button {
+  background-color: #365cc3;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 24px 8px 24px;
+  margin: 6px 8px 6px 8px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
