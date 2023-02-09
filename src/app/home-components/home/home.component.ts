@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
@@ -6,8 +7,12 @@ import { AuthService } from 'src/app/shared/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  constructor(private auth: AuthService) {}
+export class HomeComponent implements OnInit {
+  constructor(private auth: AuthService, private router: Router) {}
+  ngOnInit(): void {
+    if (localStorage.getItem('token') !== 'true')
+      this.router.navigate(['login']);
+  }
   logout() {
     this.auth.logout();
   }

@@ -17,11 +17,20 @@
     <img class="logo" src="/assets/images/notes.png" alt="" />
     <h3 class="title">Scribble Space</h3>
     <app-login-form *ngIf="isLogin"></app-login-form>
-    <app-register-form *ngIf="!isLogin"></app-register-form>
-    <a *ngIf="isLogin" routerLink="/register" class="text">
+    <app-register-form *ngIf="isRegister"></app-register-form>
+    <app-forgot-password *ngIf="isForgotPassword"></app-forgot-password>
+    <div class="form-element">
+      <a
+        *ngIf="isLogin && !isForgotPassword"
+        routerLink="/forgot-password"
+        class="text"
+        >Forgot Password?</a
+      >
+    </div>
+    <a *ngIf="isLogin && !isForgotPassword" routerLink="/register" class="text">
       No Account? <span style="color: red">Register Here</span>
     </a>
-    <a *ngIf="!isLogin" routerLink="/login" class="text">
+    <a *ngIf="!isLogin && !isForgotPassword" routerLink="/login" class="text">
       Account Exists? <span style="color: green">Login Here</span>
     </a>
   </div>

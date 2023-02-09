@@ -6,14 +6,10 @@ import { AuthService } from 'src/app/shared/auth.service';
   templateUrl: './register-form.component.html',
   styleUrls: ['./register-form.component.css'],
 })
-export class RegisterFormComponent implements OnInit {
+export class RegisterFormComponent {
   email: string = '';
   password: string = '';
   constructor(private auth: AuthService) {}
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   register() {
     if (this.email == '') {
