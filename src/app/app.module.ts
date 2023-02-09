@@ -10,19 +10,30 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './authentication-components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './authentication-components/login-form/login-form.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { RegisterFormComponent } from './register-form/register-form.component';
+import { RegisterFormComponent } from './authentication-components/register-form/register-form.component';
+import { HomeComponent } from './home-components/home/home.component';
+import { ForgotPasswordComponent } from './authentication-components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './authentication-components/verify-email/verify-email.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoginFormComponent, RegisterFormComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
+    HomeComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

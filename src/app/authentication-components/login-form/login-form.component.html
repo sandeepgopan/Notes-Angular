@@ -3,11 +3,12 @@
     <!-- <label class="label" for="name">Username</label> -->
     <input
       type="text"
-      placeholder="Username"
+      placeholder="Email"
       class="form-control"
-      id="name"
+      id="email"
       required
-      name="name"
+      name="email"
+      [(ngModel)]="email"
     />
   </div>
   <div class="form-element">
@@ -16,12 +17,17 @@
       type="text"
       placeholder="Password"
       class="form-control"
-      id="name"
+      id="password"
       required
-      name="name"
+      name="password"
+      [(ngModel)]="password"
     />
   </div>
+
   <div class="form-element">
-    <button class="submit-button">Login</button>
+    <button (click)="login()" class="submit-button">Login</button>
+  </div>
+  <div class="form-element">
+    <a routerLink="/login" class="text">Forgot Password?</a>
   </div>
 </div>
