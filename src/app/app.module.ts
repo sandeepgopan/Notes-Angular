@@ -23,6 +23,12 @@ import { RegisterFormComponent } from './authentication-components/register-form
 import { HomeComponent } from './home-components/home/home.component';
 import { ForgotPasswordComponent } from './authentication-components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './authentication-components/verify-email/verify-email.component';
+import { ModalComponent } from './reusable-components/modal/modal.component';
+import { MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { DirectoryComponent } from './home-components/directory/directory.component';
+import { AllnotesComponent } from './home-components/allnotes/allnotes.component';
+import { AboutComponent } from './home-components/about/about.component';
+import { LogoutComponent } from './home-components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +39,14 @@ import { VerifyEmailComponent } from './authentication-components/verify-email/v
     HomeComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    ModalComponent,
+    DirectoryComponent,
+    AllnotesComponent,
+    AboutComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -45,13 +55,14 @@ import { VerifyEmailComponent } from './authentication-components/verify-email/v
     MatIconModule,
     MatCardModule,
     MatGridListModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
   ],
-  providers: [],
+  providers: [MdbModalService],
   bootstrap: [AppComponent],
   exports: [
     MatButtonModule,

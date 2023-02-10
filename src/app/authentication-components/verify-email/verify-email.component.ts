@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-verify-email',
   templateUrl: './verify-email.component.html',
-  styleUrls: ['./verify-email.component.css']
+  styleUrls: ['./verify-email.component.css'],
 })
-export class VerifyEmailComponent {
+export class VerifyEmailComponent implements OnInit {
+  checked: boolean = false;
 
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.checked = true;
+    }, 2000);
+  }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
 }

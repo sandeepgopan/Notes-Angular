@@ -1,1 +1,17 @@
-<p>verify-email works!</p>
+<div class="container">
+  <img
+    class="verify-email-image"
+    src="/assets/images/verify-email-background.jpg"
+    alt=""
+  />
+  <input type="checkbox" id="check" class="check" [checked]="checked" />
+  <h1 class="text">
+    A verification email has been sent to you. Please click the link in the
+    email to verify your email address. Thank you!
+  </h1>
+
+  <label for="check">
+    <div class="check-icon"></div>
+  </label>
+  <button class="button" (click)="goToLogin()">Login</button>
+</div>

@@ -8,7 +8,12 @@ import { AuthService } from 'src/app/shared/auth.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private auth: AuthService, private router: Router) {}
+  myScriptElement: HTMLScriptElement;
+  constructor(private auth: AuthService, private router: Router) {
+    this.myScriptElement = document.createElement('script');
+    this.myScriptElement.src = '/assets/js/navbar.js';
+    document.body.appendChild(this.myScriptElement);
+  }
   ngOnInit(): void {
     if (localStorage.getItem('token') !== 'true')
       this.router.navigate(['login']);
