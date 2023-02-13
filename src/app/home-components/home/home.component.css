@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
+html,
 body {
   font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
 }
 * {
   margin: 0;
@@ -17,14 +20,14 @@ body {
   height: auto;
 
   /* Set up positioning */
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
 
-i {
+/* i {
   margin-right: 10px;
-}
+} */
 /*----------bootstrap-navbar-css------------*/
 .navbar-logo {
   padding: 15px;

@@ -19,7 +19,8 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'directory', pathMatch: 'full' },
+      // Change
+      { path: '', redirectTo: 'allnotes', pathMatch: 'full' },
       { path: 'allnotes', redirectTo: 'allnotes' },
       {
         path: 'directory',

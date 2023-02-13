@@ -91,4 +91,25 @@ export class AuthService {
     //   }
     // );
   }
+  getUser() {
+    this.fireauth.currentUser.then(
+      (user) => {
+        return user;
+      },
+      (err) => {
+        alert('blah');
+      }
+    );
+  }
+  // getUser() {
+  //   this.fireauth.currentUser.then(
+  //     (user) => {
+  //       console.log(user?.uid);
+  //       return user;
+  //     },
+  //     (err) => {
+  //       return '';
+  //     }
+  //   );
+  // }
 }

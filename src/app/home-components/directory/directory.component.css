@@ -4,7 +4,7 @@
   margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 50px;
   grid-column: 1 / span 3;
   row-gap: 50px;
