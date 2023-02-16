@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     if (localStorage.getItem('token') !== 'true')
       this.router.navigate(['login']);
+    // else this.router.navigate(['scribble']); //Todo remove this line
   }
   logout() {
     this.auth.logout();

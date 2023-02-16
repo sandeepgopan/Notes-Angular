@@ -1,0 +1,49 @@
+<div class="container">
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <button (click)="goBack()" href="#" mat-button>
+      <mat-icon>keyboard_backspace</mat-icon>
+    </button>
+    <input type="text" [(ngModel)]="title" class="title" />
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars text-white"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <div class="hori-selector">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </ul>
+    </div>
+    <button (click)="onSave()" href="#" mat-button>
+      <mat-icon>save</mat-icon>
+    </button>
+  </nav>
+  <!-- <form method="post">
+    <textarea id="mytextarea">Hello, World!</textarea>
+  </form> -->
+  <editor
+    [(ngModel)]="scribble"
+    apiKey="hepyziqfo0vp0o0x7sa3mgvyf4tzqbxat818g2oh84iy9kh9"
+    [init]="{
+      height: 800,
+      menubar: false,
+      plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste code help wordcount'
+      ],
+      toolbar:
+        'undo redo | styles | fontfamily | fontsize | strikethrough | bold italic backcolor | \
+       alignleft aligncenter alignright alignjustify | \
+       bullist numlist outdent indent | removeformat | blockquote'
+    }"
+  ></editor>
+</div>

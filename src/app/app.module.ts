@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { DirectoryComponent } from './home-components/directory/directory.compon
 import { AllnotesComponent } from './home-components/allnotes/allnotes.component';
 import { AboutComponent } from './home-components/about/about.component';
 import { LogoutComponent } from './home-components/logout/logout.component';
+import { ScribbleComponent } from './home-components/scribble/scribble.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { LogoutComponent } from './home-components/logout/logout.component';
     AllnotesComponent,
     AboutComponent,
     LogoutComponent,
+    ScribbleComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { LogoutComponent } from './home-components/logout/logout.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
+    EditorModule,
   ],
   providers: [MdbModalService],
   bootstrap: [AppComponent],

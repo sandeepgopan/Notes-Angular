@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 100%;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {
+  padding: 25px 0px 25px 0px;
+  color: #fff;
+}
+.navbar-mainbg {
+  background-color: #365cc3;
+  padding: 0px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-custom {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent ul li a {
+    padding: 12px 30px;
+  }
+  .hori-selector {
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .hori-selector .left,
+  .hori-selector .right {
+    right: 10px;
+  }
+  .hori-selector .left {
+    top: -25px;
+    left: auto;
+  }
+  .hori-selector .right {
+    bottom: -25px;
+  }
+  .hori-selector .left:before {
+    left: -25px;
+    top: -25px;
+  }
+  .hori-selector .right:before {
+    bottom: -25px;
+    left: -25px;
+  }
+}
+
+/* End of Navbar */
+
+mat-icon {
+  color: #fff;
+  transform: scale(1.5);
+}
+editor {
+  height: 100vh;
+}
+.title {
+  background-color: #365cc3;
+  border: none;
+  border-bottom: solid 2px #fff;
+  color: #fff;
+  text-align: left;
+  font-size: large;
+  text-transform: capitalize;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Beginning of Placeholder */
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
+/* End of Placeholder */

@@ -8,12 +8,14 @@ import { DirectoryComponent } from './home-components/directory/directory.compon
 import { AllnotesComponent } from './home-components/allnotes/allnotes.component';
 import { AboutComponent } from './home-components/about/about.component';
 import { LogoutComponent } from './home-components/logout/logout.component';
+import { ScribbleComponent } from './home-components/scribble/scribble.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/directory', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: LoginComponent },
   { path: 'forgot-password', component: LoginComponent },
+  { path: 'scribble', component: ScribbleComponent },
   { path: 'verify-email', component: VerifyEmailComponent },
   {
     path: 'home',

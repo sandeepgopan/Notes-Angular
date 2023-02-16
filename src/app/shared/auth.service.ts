@@ -81,35 +81,5 @@ export class AuthService {
         }
       )
     );
-    // user.sendEmailForVerification().then(
-    //   (res: any) => {
-    //     // this.router.navigate(['/verify-email'])
-    //     alert('A verification email has been sent to you. Please verify it.');
-    //   },
-    //   (err: any) => {
-    //     alert('Something went wrong!');
-    //   }
-    // );
   }
-  getUser() {
-    this.fireauth.currentUser.then(
-      (user) => {
-        return user;
-      },
-      (err) => {
-        alert('blah');
-      }
-    );
-  }
-  // getUser() {
-  //   this.fireauth.currentUser.then(
-  //     (user) => {
-  //       console.log(user?.uid);
-  //       return user;
-  //     },
-  //     (err) => {
-  //       return '';
-  //     }
-  //   );
-  // }
 }
